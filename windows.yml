@@ -1,9 +1,13 @@
 ---
 - hosts: windows 
   become: True
+  vars_files:
+   - input.yml
   tasks:
   - win_ping:
     register: win_conn
     ignore_unreachable: yes
     
-  - debug: var=win_con
+  - debug: var=win_conn
+
+  - debug: var="{{ input1 }}"
