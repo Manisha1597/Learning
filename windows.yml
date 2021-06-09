@@ -1,0 +1,5 @@
+- win_ping:
+register: win_conn
+ignore_unreachable: yes
+
+- debug: var=win_conn
