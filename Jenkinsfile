@@ -4,7 +4,7 @@ pipeline {
           stage('Creating vars file')
                 {
                     steps{
-                                  sh "/usr/bin/python3 create_yml.py ${currentBuild.number} ${JOB_NAME} $input1"
+                                  sh "python create_yml.py ${currentBuild.number} ${JOB_NAME} $input1"
                                 }
 
             }
