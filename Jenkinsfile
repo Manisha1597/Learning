@@ -19,7 +19,7 @@ pipeline {
         stage('Trigger playbook') {
             steps {
                  //copy inventory from /tmp to usecase folder with the build_number
-                 sh "ansible-playbook -i inventory windows.yml --extra-vars job_name=${JOB_NAME} --extra-vars build_number=${currentBuild.number}"
+                 sh "ansible-playbook -i /var/jenkins/workspace/${JOB_NAME}/inventory windows.yml --extra-vars job_name=${JOB_NAME} --extra-vars build_number=${currentBuild.number}"
     }
         }    
         stage('Post action') {
