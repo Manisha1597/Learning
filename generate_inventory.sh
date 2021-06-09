@@ -8,8 +8,8 @@ echo $1 $2
 echo "host env for adhoc is "
 echo $host_env
 
-echo "[windows]" > /var/jenkins_home/workspace/$job_name/inventory
+echo "[windows]" > /var/jenkins/workspace/$job_name/inventory
 
 host=$(echo $host_env|sed 's/,/\n/g')
 
-echo "$host" >> /var/jenkins_home/workspace/$job_name/inventory
+echo "$host" >> /var/jenkins/workspace/$job_name/inventory
