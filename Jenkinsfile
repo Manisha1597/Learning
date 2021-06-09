@@ -1,6 +1,13 @@
 pipeline {
     agent any
     stages{
+        stage('Create Inventory File')
+                {
+                    steps {                    
+                                  sh "sh generate_inventory.sh ${currentBuild.number} ${JOB_NAME} $host_env"
+                                }
+
+            }
           stage('Creating vars file')
                 {
                     steps{
