@@ -1,7 +1,9 @@
 ---
-- hosts: webservers 
+- hosts: windows 
   become: True
   tasks:
-- win_ping:
-register: win_conn
-ignore_unreachable: yes
+  - win_ping:
+    register: win_conn
+    ignore_unreachable: yes
+    
+  - debug: var=win_con
