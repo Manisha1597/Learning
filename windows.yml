@@ -1,6 +1,5 @@
 ---
-- hosts: windows 
-  become: True
+- hosts: windows
   vars_files:
    - input.yml
   tasks:
