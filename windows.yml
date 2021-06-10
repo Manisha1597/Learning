@@ -9,4 +9,4 @@
     
   - debug: var=win_conn
 
-  - debug: var="{{ input1 }}"
+  - debug: msg="{{ input1 }}"
